@@ -35,8 +35,8 @@ const services: Array<{
     ),
   },
   {
-    title: 'Lancement & SEO',
-    description: 'Mise en ligne optimisée. Référencement naturel et performances maximales.',
+    title: 'SEO & Lancement optimisé',
+    description: 'Référencement naturel, performances, indexation propre.',
     gradient: 'from-purple-200 to-purple-300',
     iconColor: 'text-purple-600',
     icon: (
@@ -71,8 +71,8 @@ const services: Array<{
     ),
   },
   {
-    title: 'IA Légère',
-    description: 'Chatbots, recommandations, automatisation. Intelligence au service de vos users.',
+    title: 'IA utile (à la demande)',
+    description: 'Chatbots, recommandations, automatisations. Intelligence au service de vos users.',
     gradient: 'from-purple-200 to-purple-300',
     iconColor: 'text-purple-600',
     icon: (
@@ -85,7 +85,7 @@ const services: Array<{
 
 export default function Services() {
   return (
-    <section className="relative z-[20] py-24 px-6 bg-white">
+    <section className="relative z-[20] py-24 px-6 bg-gray-100">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16 animate-fade-in">
           Nos services

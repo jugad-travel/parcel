@@ -62,7 +62,10 @@ export default function Footer() {
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              Mentions légales
+              Contrat d&apos;abonnement
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              Mentions légales & CGV
             </a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">
               Politique de confidentialité

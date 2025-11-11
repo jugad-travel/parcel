@@ -4,7 +4,7 @@ const steps = [
   {
     number: '01',
     title: 'Audit',
-    description: 'Analyse de votre besoin, étude de vos objectifs et de votre audience.',
+    description: 'On cerne vos besoins, rien à préparer.',
     gradient: 'from-blue-200 via-purple-200 to-purple-300',
     iconBg: 'bg-[#001a58]',
     icon: (
@@ -17,7 +17,7 @@ const steps = [
   {
     number: '02',
     title: 'Maquette Gratuite',
-    description: 'Prototype haute-fidélité offert. Vous visualisez avant de vous engager.',
+    description: 'Vous voyez avant d\'accepter.',
     gradient: 'from-green-200 via-blue-200 to-blue-300',
     iconBg: 'bg-[#001a58]',
     icon: (
@@ -30,7 +30,7 @@ const steps = [
   {
     number: '03',
     title: 'Validation',
-    description: 'Ajustements collaboratifs. Le projet avance avec votre feedback.',
+    description: 'Ajustements simples, on s\'occupe de tout.',
     gradient: 'from-purple-200 via-pink-200 to-pink-300',
     iconBg: 'bg-purple-700',
     icon: (
@@ -42,7 +42,7 @@ const steps = [
   {
     number: '04',
     title: 'Lancement',
-    description: 'Mise en ligne optimisée, formation et support. Votre site est live.',
+    description: 'Site en ligne, suivi et améliorations.',
     gradient: 'from-pink-200 via-orange-200 to-orange-300',
     iconBg: 'bg-pink-600',
     icon: (

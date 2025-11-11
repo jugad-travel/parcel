@@ -8,6 +8,7 @@ export default function Contact() {
     email: '',
     company: '',
     message: '',
+    phoneCallback: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -24,7 +25,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative z-[20] py-24 px-6 bg-white">
+    <section id="contact" className="relative z-[20] py-24 px-6 bg-gray-100">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -95,6 +96,18 @@ export default function Contact() {
               rows={5}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#001a58] focus:border-transparent transition-all resize-none"
             />
+          </div>
+          <div className="mb-6">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                name="phoneCallback"
+                checked={formData.phoneCallback}
+                onChange={(e) => setFormData({ ...formData, phoneCallback: e.target.checked })}
+                className="w-5 h-5 rounded border-gray-300 text-[#001a58] focus:ring-2 focus:ring-[#001a58]"
+              />
+              <span className="text-sm text-gray-700">Être rappelé(e) par téléphone</span>
+            </label>
           </div>
           <button
             type="submit"

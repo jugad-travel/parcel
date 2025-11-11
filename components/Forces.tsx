@@ -2,8 +2,8 @@
 
 const forces = [
   {
-    title: 'Refonte complète',
-    description: 'Votre site mérite un nouveau souffle. Design moderne, expérience fluide.',
+    title: 'On s\'occupe de tout',
+    description: 'Design, contenus, SEO, domaine, hébergement, maintenance.',
     gradient: 'from-pink-200 to-pink-300',
     iconColor: 'text-pink-600',
     icon: (
@@ -15,8 +15,8 @@ const forces = [
     ),
   },
   {
-    title: 'Design sur-mesure',
-    description: 'Chaque projet est unique. Nous créons des interfaces qui vous ressemblent.',
+    title: 'SEO & GEO qui convertissent',
+    description: 'Visibles localement, structure IA-ready, résultats mesurables.',
     gradient: 'from-teal-200 to-teal-300',
     iconColor: 'text-teal-600',
     icon: (
@@ -28,8 +28,8 @@ const forces = [
     ),
   },
   {
-    title: 'SEO & Vitesse',
-    description: 'Visible sur Google, ultra-rapide. Performance et référencement optimisés.',
+    title: 'Vitesse & qualité',
+    description: 'Code propre, performant, mobile-first.',
     gradient: 'from-purple-200 to-purple-300',
     iconColor: 'text-purple-600',
     icon: (
@@ -39,8 +39,8 @@ const forces = [
     ),
   },
   {
-    title: 'Intégration IA',
-    description: 'Automatisation, chatbots, contenu intelligent. Le futur commence ici.',
+    title: 'IA quand c\'est utile',
+    description: 'Chatbot, automatisations, contenus assistés, analytics intelligents.',
     gradient: 'from-blue-200 to-blue-300',
     iconColor: 'text-blue-600',
     icon: (
