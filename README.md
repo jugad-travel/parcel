@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parcel - Agence Web Créative
 
-## Getting Started
+Site web de l'agence Parcel, reproduit fidèlement en Next.js avec TypeScript et Tailwind CSS.
 
-First, run the development server:
+## 🚀 Démarrage
+
+### Installation
+
+```bash
+npm install
+```
+
+### Développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build de production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🎨 Caractéristiques
 
-To learn more about Next.js, take a look at the following resources:
+- **Design moderne** : Interface épurée avec animations discrètes
+- **Responsive** : Adapté à tous les écrans
+- **Performance** : Optimisé avec Next.js
+- **TypeScript** : Code type-safe
+- **Tailwind CSS** : Styles utilitaires modernes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Structure du projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+parcel-site/
+├── app/
+│   ├── layout.tsx      # Layout principal
+│   ├── page.tsx         # Page d'accueil
+│   └── globals.css      # Styles globaux
+├── components/
+│   ├── Navbar.tsx       # Navigation
+│   ├── Hero.tsx         # Section héro
+│   ├── IntroText.tsx    # Texte d'introduction
+│   ├── Forces.tsx       # Section "Nos forces"
+│   ├── Services.tsx      # Section "Nos services"
+│   ├── Approach.tsx     # Section "Notre approche"
+│   ├── Contact.tsx      # Formulaire de contact
+│   └── Footer.tsx      # Pied de page
+└── ...
+```
 
-## Deploy on Vercel
+## 🎯 Sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Hero** : Section principale avec titre et CTA
+2. **Intro Text** : Texte d'introduction avec mots colorés
+3. **Nos forces** : 4 cartes avec dégradés pastel
+4. **Nos services** : 6 services en grille
+5. **Notre approche** : 4 étapes du processus
+6. **Contact** : Formulaire de contact
+7. **Footer** : Informations et liens
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Couleur de marque
+
+La couleur principale utilisée est **#001a58** (bleu foncé), remplaçant le teal original.
+
+## ✨ Animations
+
+- Animations d'apparition discrètes (fade-in, slide-in)
+- Effets hover sur les cartes et boutons
+- Transitions fluides
+
+## 📝 Technologies
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
