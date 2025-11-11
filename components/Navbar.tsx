@@ -18,18 +18,11 @@ export default function Navbar() {
       scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3 animate-slide-in">
-          <div className="w-10 h-10 bg-[#001a58] rounded-lg flex items-center justify-center transform rotate-12 hover:rotate-0 transition-transform duration-300">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          <span className="text-2xl font-bold text-gray-900">Parcel</span>
+        <div className="flex items-center animate-slide-in">
+          <span className={`text-2xl font-bold transition-colors duration-200 ${scrolled ? 'text-gray-900' : 'text-white'}`}>Parcel</span>
         </div>
         <div className="flex items-center gap-6">
-          <a href="#services" className="text-gray-700 hover:text-[#001a58] transition-colors duration-200 font-medium">
+          <a href="#services" className={`transition-colors duration-200 font-medium ${scrolled ? 'text-gray-700 hover:text-[#001a58]' : 'text-white hover:text-white/80'}`}>
             Services
           </a>
           <a 

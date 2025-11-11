@@ -55,7 +55,7 @@ const steps = [
 
 export default function Approach() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="relative z-[20] py-24 px-6 bg-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">

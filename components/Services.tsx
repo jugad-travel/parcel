@@ -27,41 +27,65 @@ const services: Array<{
     description: 'Code propre, rapide et maintenable. Technologies modernes et éprouvées.',
     gradient: 'from-blue-200 to-blue-300',
     iconColor: 'text-blue-600',
-    icon: '<>',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 18L22 12L16 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M8 6L2 12L8 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
   },
   {
     title: 'Lancement & SEO',
     description: 'Mise en ligne optimisée. Référencement naturel et performances maximales.',
     gradient: 'from-purple-200 to-purple-300',
     iconColor: 'text-purple-600',
-    icon: '🚀',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12L2 7L12 2L22 7L19 12L12 22L5 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M12 2V22" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
   },
   {
     title: 'Maintenance',
     description: 'Support continu, mises à jour régulières. Votre site toujours au top.',
     gradient: 'from-orange-200 to-orange-300',
     iconColor: 'text-orange-600',
-    icon: '⚙️',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
   },
   {
     title: 'Refonte Express',
     description: 'Transformation rapide en 2-3 semaines. Design moderne, migration fluide.',
     gradient: 'from-green-200 to-green-300',
     iconColor: 'text-green-600',
-    icon: '⏱️',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+        <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    ),
   },
   {
     title: 'IA Légère',
     description: 'Chatbots, recommandations, automatisation. Intelligence au service de vos users.',
     gradient: 'from-purple-200 to-purple-300',
     iconColor: 'text-purple-600',
-    icon: '✨',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    ),
   },
 ];
 
 export default function Services() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="relative z-[20] py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16 animate-fade-in">
           Nos services
