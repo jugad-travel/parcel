@@ -15,22 +15,14 @@ export default function Hero() {
       </video>
       
       {/* Overlay pour améliorer la lisibilité */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black/20 z-10"></div>
       
       {/* Contenu */}
-      <div className="relative z-20 max-w-4xl mx-auto text-center space-y-8">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm border border-white/20 mb-4 animate-fade-in">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-[#001a58]">
-            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor"/>
-          </svg>
-          <span className="text-sm font-medium text-gray-900">Agence Web Créative</span>
-        </div>
-
+      <div className="relative z-20 max-w-4xl mx-auto text-center space-y-8 pt-8">
         {/* Main Headline */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
-          L&apos;agence pour<br />
-          votre futur site.
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
+          L&apos;agence pour<br className="leading-none" />
+          <span className="block mt-1">votre futur site.</span>
         </h1>
 
         {/* Sub-headline */}
