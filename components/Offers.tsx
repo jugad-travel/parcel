@@ -44,14 +44,14 @@ export default function Offers() {
           {offers.map((offer, index) => (
             <div
               key={offer.title}
-              className={`bg-gradient-to-br ${offer.gradient} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up`}
+              className={`bg-gradient-to-br ${offer.gradient} rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in-up flex flex-col`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{offer.title}</h3>
-              <p className="text-gray-700 mb-6">{offer.description}</p>
+              <p className="text-gray-700 mb-6 flex-grow">{offer.description}</p>
               <button
                 onClick={handleContactClick}
-                className="w-full bg-[#001a58] text-white px-6 py-3 rounded-full font-bold hover:bg-[#002d7a] transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="w-full bg-[#001a58] text-white px-6 py-3 rounded-full font-bold hover:bg-[#002d7a] transition-all duration-200 transform hover:scale-105 shadow-lg mt-auto"
               >
                 Demander un devis
               </button>

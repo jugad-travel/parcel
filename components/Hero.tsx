@@ -113,9 +113,15 @@ export default function Hero() {
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
           L&apos;agence web qui<br className="leading-none" />
           <span className="block mt-1">
-            <span className="relative inline-block">
-              casse les codes
-              <span className="absolute bottom-0 left-12 -right-4 h-3 bg-pink-500/40 -z-10 transform -skew-x-12"></span>
+            <span className="relative inline-block px-2">
+              <span className="relative z-10">casse les codes</span>
+              <span 
+                className="absolute top-3 bottom-0 left-12 -right-2 bg-pink-500/40 -z-10 rounded-sm"
+                style={{
+                  animation: 'highlightSlide 0.8s ease-out 0.5s both',
+                  transformOrigin: 'left center',
+                }}
+              ></span>
             </span>
           </span>
         </h1>

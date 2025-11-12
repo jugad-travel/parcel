@@ -78,3 +78,14 @@ body {
 .video-smooth-loop {
   animation: videoFade 10s ease-in-out infinite;
 }
+
+@keyframes highlightSlide {
+  from {
+    transform: scaleX(0) skewX(-12deg);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1) skewX(-12deg);
+    opacity: 1;
+  }
+}

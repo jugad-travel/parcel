@@ -13,21 +13,58 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleHowItWorksClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const howItWorksSection = document.getElementById('how-it-works');
+    if (howItWorksSection) {
+      howItWorksSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center animate-slide-in">
-          <span className={`text-2xl font-bold transition-colors duration-200 ${scrolled ? 'text-gray-900' : 'text-white'}`}>Parcel</span>
-        </div>
-        <div className="flex items-center gap-6">
-          <a href="#services" className={`transition-colors duration-200 font-medium ${scrolled ? 'text-gray-700 hover:text-[#001a58]' : 'text-white hover:text-white/80'}`}>
+    <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-[9999]">
+      <div className="bg-purple-100/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg flex items-center justify-center relative">
+        {/* Liens de navigation centrés */}
+        <div className="flex items-center gap-6 relative z-10">
+          <a 
+            href="#how-it-works" 
+            onClick={handleHowItWorksClick}
+            className="relative text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer"
+            style={{ position: 'relative', zIndex: 10 }}
+          >
+            <span className="relative z-10">Commencer</span>
+            <span 
+              className="absolute inset-0 top-1 bottom-0 left-0 right-0 bg-pink-500/40 transform -skew-x-12 rounded-sm" 
+              style={{ zIndex: -1, pointerEvents: 'none' }}
+            ></span>
+          </a>
+          <a 
+            href="#services" 
+            onClick={handleServicesClick}
+            className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
+          >
             Services
           </a>
           <a 
             href="#contact" 
-            className="bg-[#001a58] text-white px-6 py-2 rounded-full font-medium hover:bg-[#002d7a] transition-all duration-200 transform hover:scale-105"
+            onClick={handleContactClick}
+            className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
           >
             Contact
           </a>

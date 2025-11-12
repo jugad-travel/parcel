@@ -1,6 +1,5 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import IntroText from '@/components/IntroText';
 import Forces from '@/components/Forces';
 import HowItWorks from '@/components/HowItWorks';
 import Services from '@/components/Services';
@@ -17,7 +16,6 @@ export default function Home() {
     <main className="min-h-screen relative z-[100]">
       <Navbar />
       <Hero />
-      <IntroText />
       <Forces />
       <HowItWorks />
       <Services />
