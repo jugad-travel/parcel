@@ -1,9 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isNoaPage = pathname === '/agent-ia-outdoor';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,32 +46,48 @@ export default function Navbar() {
       <div className="bg-purple-100/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg flex items-center justify-center relative">
         {/* Liens de navigation centrés */}
         <div className="flex items-center gap-6 relative z-10">
-          <a 
-            href="#how-it-works" 
-            onClick={handleHowItWorksClick}
-            className="relative text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer"
-            style={{ position: 'relative', zIndex: 10 }}
-          >
-            <span className="relative z-10">Commencer</span>
-            <span 
-              className="absolute inset-0 top-1 bottom-0 left-0 right-0 bg-pink-500/40 transform -skew-x-12 rounded-sm" 
-              style={{ zIndex: -1, pointerEvents: 'none' }}
-            ></span>
-          </a>
-          <a 
-            href="#services" 
-            onClick={handleServicesClick}
-            className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
-          >
-            Services
-          </a>
-          <a 
-            href="#contact" 
-            onClick={handleContactClick}
-            className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
-          >
-            Contact
-          </a>
+          {isNoaPage ? (
+            <Link 
+              href="/"
+              className="relative text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer"
+              style={{ position: 'relative', zIndex: 10 }}
+            >
+              <span className="relative z-10">← Retour à l&apos;accueil</span>
+              <span 
+                className="absolute inset-0 top-1 bottom-0 left-0 right-0 bg-pink-500/40 transform -skew-x-12 rounded-sm" 
+                style={{ zIndex: -1, pointerEvents: 'none' }}
+              ></span>
+            </Link>
+          ) : (
+            <>
+              <a 
+                href="#how-it-works" 
+                onClick={handleHowItWorksClick}
+                className="relative text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer"
+                style={{ position: 'relative', zIndex: 10 }}
+              >
+                <span className="relative z-10">Commencer</span>
+                <span 
+                  className="absolute inset-0 top-1 bottom-0 left-0 right-0 bg-pink-500/40 transform -skew-x-12 rounded-sm" 
+                  style={{ zIndex: -1, pointerEvents: 'none' }}
+                ></span>
+              </a>
+              <a 
+                href="#services" 
+                onClick={handleServicesClick}
+                className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
+              >
+                Services
+              </a>
+              <a 
+                href="#contact" 
+                onClick={handleContactClick}
+                className="text-black font-bold text-sm uppercase tracking-wide hover:opacity-70 transition-opacity px-2 cursor-pointer relative z-10"
+              >
+                Contact
+              </a>
+            </>
+          )}
         </div>
       </div>
     </nav>
