@@ -48,8 +48,8 @@ export default function Footer() {
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>contact@parcel-agency.fr</li>
-              <li>+33 1 23 45 67 89</li>
+              <li>parcel.webai@gmail.com</li>
+              <li>0635336696</li>
               <li>Paris, France</li>
             </ul>
           </div>
