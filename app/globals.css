@@ -130,18 +130,23 @@ body {
 }
 
 /* Fallback pour bg-clip-text avec text-transparent (dégradés de texte) */
+/* Important : pas de fond, juste la couleur du texte en rose */
 .old-safari [class*="bg-clip-text"][class*="text-transparent"][class*="from-pink-500"] {
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  -webkit-text-fill-color: #ec4899 !important; /* pink-500 */
+  background-image: none !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #ec4899 !important; /* pink-500 - couleur du surlignement */
   color: #ec4899 !important;
 }
 
 .old-safari [class*="bg-clip-text"][class*="text-transparent"][class*="from-purple-600"] {
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
-  -webkit-text-fill-color: #9333ea !important; /* purple-600 */
-  color: #9333ea !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #ec4899 !important; /* pink-500 - même couleur rose pour cohérence */
+  color: #ec4899 !important;
 }
 
 /* Fallback pour les dégradés avec opacité dans les boutons (hover effects) */
@@ -168,20 +173,26 @@ body {
 }
 
 /* Fallback pour TOUS les textes avec dégradé (bg-clip-text) - règle générale */
+/* Important : pas de fond, juste la couleur du texte */
 .old-safari [class*="bg-clip-text"][class*="text-transparent"] {
   -webkit-background-clip: unset !important;
   background-clip: unset !important;
   background-image: none !important;
+  background-color: transparent !important;
 }
 
 /* Couleurs spécifiques pour les textes avec dégradé pink-500 */
 .old-safari [class*="bg-clip-text"][class*="from-pink-500"] {
-  -webkit-text-fill-color: #ec4899 !important;
+  -webkit-text-fill-color: #ec4899 !important; /* pink-500 - couleur du surlignement */
   color: #ec4899 !important;
+  background-color: transparent !important;
+  background-image: none !important;
 }
 
 /* Couleurs spécifiques pour les textes avec dégradé purple-600 */
 .old-safari [class*="bg-clip-text"][class*="from-purple-600"] {
-  -webkit-text-fill-color: #9333ea !important;
-  color: #9333ea !important;
+  -webkit-text-fill-color: #ec4899 !important; /* pink-500 - même couleur rose pour cohérence */
+  color: #ec4899 !important;
+  background-color: transparent !important;
+  background-image: none !important;
 }
