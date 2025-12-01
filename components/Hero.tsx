@@ -88,7 +88,7 @@ export default function Hero() {
       
       {/* Logo Parcel - Conteneur indépendant */}
       <div 
-        className="relative z-[50] flex justify-center animate-fade-in-up -mt-8" 
+        className="relative z-[50] flex justify-center animate-fade-in-up mt-4 md:-mt-8" 
         style={{ animationDelay: '0.1s' }}
       >
         <Image
@@ -103,15 +103,15 @@ export default function Hero() {
 
       {/* Contenu - Relative pour qu'il monte lors du scroll - disparaît progressivement au scroll */}
       <div 
-        className="relative z-[50] max-w-4xl mx-auto text-center pt-0 -mt-40"
+        className="relative z-[50] max-w-4xl mx-auto text-center pt-0 -mt-4 md:-mt-40"
         style={{ 
           opacity: Math.max(0, 1 - scrollProgress * 2),
           transition: 'opacity 0.05s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
         }}
       >
         {/* Main Headline */}
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-none animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
-          L&apos;agence web qui<br className="leading-none" />
+        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white leading-tight md:leading-none animate-fade-in-up drop-shadow-lg" style={{ animationDelay: '0.2s' }}>
+          L&apos;agence web qui<br className="md:hidden" />
           <span className="block mt-1">
             <span className="relative inline-block px-2">
               <span className="relative z-10">casse les codes</span>

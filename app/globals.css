@@ -89,3 +89,99 @@ body {
     opacity: 1;
   }
 }
+
+/* Fallbacks pour les anciennes versions de Safari iOS qui ne supportent pas bien les dégradés */
+/* Ces règles ne s'appliquent que lorsque la classe .old-safari est présente sur <html> */
+/* Elles n'affectent pas le rendu sur les navigateurs modernes */
+
+.old-safari [class*="bg-gradient-to-r"][class*="from-pink-500"][class*="to-purple-600"] {
+  background-image: none !important;
+  background-color: #c026d3 !important; /* Couleur moyenne entre pink-500 (#ec4899) et purple-600 (#9333ea) */
+}
+
+.old-safari [class*="bg-gradient-to-r"][class*="from-purple-600"][class*="to-indigo-600"] {
+  background-image: none !important;
+  background-color: #7c3aed !important; /* Couleur moyenne entre purple-600 (#9333ea) et indigo-600 (#4f46e5) */
+}
+
+.old-safari [class*="bg-gradient-to-br"][class*="from-pink-500"][class*="to-purple-600"] {
+  background-image: none !important;
+  background-color: #ec4899 !important; /* pink-500 */
+}
+
+.old-safari [class*="bg-gradient-to-br"][class*="from-purple-200"][class*="to-purple-300"] {
+  background-image: none !important;
+  background-color: #e9d5ff !important; /* purple-200 */
+}
+
+.old-safari [class*="bg-gradient-to-br"][class*="from-pink-200"][class*="to-pink-300"] {
+  background-image: none !important;
+  background-color: #fce7f3 !important; /* pink-200 */
+}
+
+.old-safari [class*="bg-gradient-to-br"][class*="from-blue-200"][class*="to-blue-300"] {
+  background-image: none !important;
+  background-color: #dbeafe !important; /* blue-200 */
+}
+
+.old-safari [class*="bg-gradient-to-b"][class*="from-white"][class*="to-gray-50"] {
+  background-image: none !important;
+  background-color: #fafafa !important; /* Couleur moyenne entre white et gray-50 */
+}
+
+/* Fallback pour bg-clip-text avec text-transparent (dégradés de texte) */
+.old-safari [class*="bg-clip-text"][class*="text-transparent"][class*="from-pink-500"] {
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ec4899 !important; /* pink-500 */
+  color: #ec4899 !important;
+}
+
+.old-safari [class*="bg-clip-text"][class*="text-transparent"][class*="from-purple-600"] {
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #9333ea !important; /* purple-600 */
+  color: #9333ea !important;
+}
+
+/* Fallback pour les dégradés avec opacité dans les boutons (hover effects) */
+.old-safari [class*="bg-gradient-to-r"][class*="from-[#001a58]/10"][class*="to-pink-500/10"] {
+  background-image: none !important;
+  background-color: rgba(236, 72, 153, 0.1) !important; /* pink-500 avec 10% d'opacité */
+}
+
+.old-safari [class*="bg-gradient-to-r"][class*="from-pink-500/20"][class*="to-purple-500/20"] {
+  background-image: none !important;
+  background-color: rgba(236, 72, 153, 0.2) !important; /* pink-500 avec 20% d'opacité */
+}
+
+/* Fallback générique pour tous les dégradés pink-500 to purple-600 */
+.old-safari [class*="from-pink-500"][class*="to-purple-600"]:not([class*="bg-clip-text"]) {
+  background-image: none !important;
+  background-color: #c026d3 !important;
+}
+
+/* Fallback générique pour tous les dégradés purple-600 to indigo-600 */
+.old-safari [class*="from-purple-600"][class*="to-indigo-600"]:not([class*="bg-clip-text"]) {
+  background-image: none !important;
+  background-color: #7c3aed !important;
+}
+
+/* Fallback pour TOUS les textes avec dégradé (bg-clip-text) - règle générale */
+.old-safari [class*="bg-clip-text"][class*="text-transparent"] {
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  background-image: none !important;
+}
+
+/* Couleurs spécifiques pour les textes avec dégradé pink-500 */
+.old-safari [class*="bg-clip-text"][class*="from-pink-500"] {
+  -webkit-text-fill-color: #ec4899 !important;
+  color: #ec4899 !important;
+}
+
+/* Couleurs spécifiques pour les textes avec dégradé purple-600 */
+.old-safari [class*="bg-clip-text"][class*="from-purple-600"] {
+  -webkit-text-fill-color: #9333ea !important;
+  color: #9333ea !important;
+}
